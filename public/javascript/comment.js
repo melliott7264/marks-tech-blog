@@ -1,5 +1,3 @@
-const session = require('express-session');
-
 async function commentFormHandler(event) {
   event.preventDefault();
 
@@ -11,14 +9,11 @@ async function commentFormHandler(event) {
     window.location.toString().split('/').length - 1
   ];
 
-  // const user_id = session.user_id;
-
   if (comment_text) {
     const response = await fetch('/api/comments', {
       method: 'POST',
       body: JSON.stringify({
         post_id,
-        // user_id
         comment_text,
       }),
       headers: {
