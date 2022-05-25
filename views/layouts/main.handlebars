@@ -1,23 +1,26 @@
-<html lang="en">
+<html lang='en'>
 
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Mark's Tech Blog</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
 
   <body>
-    <div class="wrapper">
+    <div class='wrapper'>
       <header>
         <h1>
-          <a href="/">Mark's Tech Blog</a>
+          <a href='/'>Mark's Tech Blog</a>
         </h1>
         <nav>
-          <a href="/homepage">Homepage</a>
-          <a href="/dashboard">Dashboard</a>
-          <a href="/login">Login</a>
-          <button id="logout" class="btn-no-style">Logout</button>
+          <a href='/'>Homepage</a>
+          {{#if loggedIn}}
+            <a href='/dashboard'>Dashboard</a>
+            <button id='logout' class='btn-no-style'>Logout</button>
+          {{else}}
+            <a href='/login'>Login</a>
+          {{/if}}
         </nav>
       </header>
       <main>
@@ -27,8 +30,9 @@
         &copy;2022 Mark Elliott All Rights Reserved
       </footer>
     </div>
-
-    <script src="/javascript/logout.js"></script>
+    {{#if loggedIn}}
+      <script src='/javascript/logout.js'></script>
+    {{/if}}
   </body>
 
 </html>

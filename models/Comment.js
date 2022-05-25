@@ -1,8 +1,8 @@
 // Model/table  to handle comments
-const { Model, DataTypes } = require("sequelize");
+const { Model, DataTypes } = require('sequelize');
 
-const sequelize = require("../config/connection");
-const User = require("./User");
+const sequelize = require('../config/connection');
+const User = require('./User');
 
 class Comment extends Model {}
 
@@ -23,18 +23,16 @@ Comment.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
-        model: "user",
-        key: "id",
+        model: 'user',
+        key: 'id',
       },
     },
     post_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
-        model: "post",
-        key: "id",
+        model: 'post',
+        key: 'id',
       },
     },
   },
@@ -45,7 +43,7 @@ Comment.init(
     freezeTableName: true,
     // make table names underscored instead of camelCase
     underscored: true,
-    modelName: "comment",
+    modelName: 'comment',
   }
 );
 
