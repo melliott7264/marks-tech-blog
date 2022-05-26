@@ -1,7 +1,6 @@
 // api/comments routes
-
 const router = require('express').Router();
-
+const withAuth = require('../../utils/auth');
 const { Comment } = require('../../models');
 
 router.get('/', (req, res) => {
@@ -15,7 +14,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   if (req.session) {
     Comment.create({
       // this is what is expected to be passed to this api endpoint
@@ -32,7 +31,7 @@ router.post('/', (req, res) => {
   }
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Comment.destroy({
     where: {
       id: req.params.id,
