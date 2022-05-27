@@ -1,10 +1,26 @@
 <article class='post'>
-  <div class='title'>
+  {{#if loggedIn}}
+  <h3>Your Post</h3>
+  <form class="update-post-form">
+   <div class='title'>
+     <h3>
+       <input type='text' id='update-post-title' value='{{post.title}}' />
+    </h3>
+  </div>
+   <div class='content'>
+      <input type='text' id='update-post-content' value='{{post.content}}' />
+  </div>
+  <button type='submit'>Save Post</button> 
+  <button type="button" class="delete-post-btn">Delete Post</button>
+  </form>
+  {{else}}
+   <div class='title'>
     <h3>{{post.title}}</h3>
   </div>
    <div class='content'>
     <p>{{post.content}}</p>
   </div>
+  {{/if}}
   <div class='meta'>
     by
     {{post.user.username}}
@@ -13,16 +29,18 @@
   </div>
 </article>
 {{#if loggedIn}}
+<h3>Add a Comment</h3>
   <form class='comment-form'>
     <div>
       <textarea name='comment-body'></textarea>
     </div>
     <div>
-      <button type='submit'>add comment</button>
+      <button type='submit'>Add Comment</button>
     </div>
   </form>
 {{/if}}
 {{>comments post.comments}}
 {{#if loggedIn}}
   <script src='/javascript/comment.js'></script>
+  <script src='/javascript/update-post.js'></script>
 {{/if}}

@@ -22,7 +22,10 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sess = {
   secret: process.env.SESSION_SECRET,
   // secret: 'Mark had a fluffy white doggie',
-  cookie: {},
+  cookie: {
+    maxage: 10 * 60 * 1000,
+  },
+  // set session timeout to 10 minutes
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({

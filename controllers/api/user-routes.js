@@ -33,13 +33,6 @@ router.get('/:id', (req, res) => {
           attributes: ['title'],
         },
       },
-      // includes each post title voted on
-      {
-        model: Post,
-        attributes: ['title'],
-        through: Vote,
-        as: 'voted_posts',
-      },
     ],
   })
     .then((dbUserData) => {

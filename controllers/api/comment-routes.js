@@ -16,6 +16,9 @@ router.get('/', (req, res) => {
 
 router.post('/', withAuth, (req, res) => {
   if (req.session) {
+    console.log(req.body.comment_text);
+    console.log(req.body.post_id);
+    console.log(req.session_user_id);
     Comment.create({
       // this is what is expected to be passed to this api endpoint
       comment_text: req.body.comment_text,
@@ -26,7 +29,7 @@ router.post('/', withAuth, (req, res) => {
       .then((dbCommentData) => res.json(dbCommentData))
       .catch((err) => {
         console.log(err);
-        res.statusCode(400).json(err);
+        res.status(500).json(err);
       });
   }
 });
