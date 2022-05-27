@@ -1,0 +1,24 @@
+<section class='comment'>
+  <h3>Update Your Comment</h3>
+  <div class='meta'>
+    Comment by
+    {{comment.user.username}}
+    on
+    {{format_date comment.created_at}}
+  </div>
+  <div class='text'>
+    <form class='update-comment-form'>
+      <div>
+        <input
+          type='text'
+          id='update-comment-text'
+          value='{{comment.comment_text}}'
+        />
+      </div>
+      <button type='submit'>Update Comment</button>
+      <button type='button' class='delete-comment-btn'>Delete Comment</button>
+    </form>
+  </div>
+</section>
+
+<script src='/javascript/update-comment.js'></script>

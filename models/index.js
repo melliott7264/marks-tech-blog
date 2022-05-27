@@ -22,7 +22,7 @@ Comment.belongsTo(User, {
 
 // Many to one
 Comment.belongsTo(Post, {
-  foreignKey: 'post_id',
+  // foreignKey: 'post_id',
 });
 
 // One to many
