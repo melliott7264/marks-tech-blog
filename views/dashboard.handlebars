@@ -5,13 +5,13 @@
        {{#if posts.length}}
         <section>
             <h2 class="center-heading">Your Posts</h2>
-        <ol>  
+        <ul>  
           {{#each posts as |post|}}
             <li>
               {{>post-info post}}
             </li>
           {{/each}}
-        </ol>
+        </ul>
         </section>
       {{/if}}
      </div>

@@ -13,7 +13,7 @@
 
   <body>
     <div class='wrapper'>
-      <header>
+      <header class='container'>
         <div class='row bg-light'>
           <div class='col-12'>
             <h1 class='text-center'>
@@ -53,9 +53,9 @@
       <main>
         {{{body}}}
       </main>
-      <footer class='bg-info text-white text-center'>
+      {{! <footer class='bg-info text-white text-center'>
         &copy;2022 Mark Elliott All Rights Reserved
-      </footer>
+      </footer> }}
       {{#if loggedIn}}
         <script src='/javascript/logout.js'></script>
       {{/if}}

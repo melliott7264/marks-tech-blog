@@ -1,16 +1,24 @@
-<section>
-  <h2>Create New Post</h2>
-  <form class='new-post-form'>
-    <div>
-      <label for='post-title'>Title</label>
-      <input type='text' id='post-title' name='post-title' />
+<div class='container'>
+  <div class='row'>
+    <div class='col-1 col-md-2 col-xl-3'></div>
+    <div class='col-10 col-md-8 col-xl-6'>
+      <section>
+        <h2 class='center-heading'>Create New Post</h2>
+        <form class='new-post-form'>
+          <div>
+            <label for='post-title'>Title</label>
+            <input type='text' id='post-title' name='post-title' />
+          </div>
+          <div>
+            <label for='post-content'>Content</label>
+            <input type='text' id='post-content' name='post-content' />
+          </div>
+          <button type='submit' class='post-create-btn'>Create</button>
+        </form>
+      </section>
     </div>
-    <div>
-      <label for='post-content'>Content</label>
-      <input type='text' id='post-content' name='post-content' />
-    </div>
-    <button type='submit' class="'btn">Create</button>
-  </form>
-</section>
+    <div class='col-1 col-md-2 col-xl-3'></div>
+  </div>
+</div>
 
 <script src='/javascript/post.js'></script>

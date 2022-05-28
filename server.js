@@ -23,11 +23,12 @@ const sess = {
   secret: process.env.SESSION_SECRET,
   // secret: 'Mark had a fluffy white doggie',
   cookie: {
-    maxage: 10 * 60 * 1000,
+    expires: 60 * 1000,
   },
   // set session timeout to 10 minutes
-  resave: false,
-  saveUninitialized: true,
+  resave: true,
+  rolling: true,
+  saveUninitialized: false,
   store: new SequelizeStore({
     db: sequelize,
   }),

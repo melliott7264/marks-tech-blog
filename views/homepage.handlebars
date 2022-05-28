@@ -1,17 +1,17 @@
-<div class="container">
-  <div class="row">
-    <div class="col-1 col-md-2 col-xl-3"></div>
-     <div class="col-10 col-md-8 col-xl-6">
-      <ol class='post-list container'>
+<div class='container'>
+  <div class='row'>
+    <div class='col-1 col-md-2 col-xl-3'></div>
+     <div class='col-10 col-md-8 col-xl-6'>
+      <ul class='post-list container'>
         {{#each posts as |post|}}
-        <div class="row">
-          <li class="col border border-3 rounded">
+        <div class='row'>
+          <li class='col'>
             {{> post-info post}}
           </li>
         </div>
         {{/each}}
-      </ol>
+      </ul>
     </div>
-    <div class="col-1 col-md-2 col-xl-3"></div>
+    <div class='col-1 col-md-2 col-xl-3'></div>
   </div>
 </div>

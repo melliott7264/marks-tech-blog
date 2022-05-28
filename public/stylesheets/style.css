@@ -6,6 +6,11 @@ a:hover {
   color: blue;
 }
 
+/* Turn off bullet points */
+ul {
+  list-style-type: none;
+}
+
 /* Center the headings */
 .center-heading {
   display: block;
@@ -15,7 +20,8 @@ a:hover {
 /* style login/signup buttons */
 .login-btn,
 .signup-btn,
-.add-comment-btn {
+.add-comment-btn,
+.post-create-btn {
   width: 150px;
   padding: 4px;
   margin: 4px auto;
@@ -38,13 +44,27 @@ a:hover {
 }
 
 /* styling for input fields */
-#update-post-title {
+#update-post-title,
+#post-title,
+#post-content {
   width: 100%;
+}
+
+#post-content {
+  height: 30%;
 }
 
 #update-post-content,
 #update-comment-text,
 .comment-text-area {
   width: 100%;
+}
+
+#update-post-content,
+#update-comment-text {
   height: 20%;
+}
+
+.comment-text-area {
+  height: 15%;
 }
