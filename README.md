@@ -17,15 +17,9 @@ This project will be running on Heroku. So, no real installation will be require
 
 ## Usage
 
-This application will be run from Heroku at the following URL: https://warm-chamber-02188.herokuapp.com/.
+This application will be run from Heroku at the following URL: https://warm-chamber-02188.herokuapp.com/. The database may be empty when you first run the application. If that is the case, you will need to create a new login. Click on Login and and enter a new username and password. Passwords must be at least 8 characters. Once you are logged in, you can click on Dashboard and then on Create New Post. Fill in the Title and Content and click on create to create a new post. It will be displayed in your Dashboard and on the Homepage. If you click on the title of the post, you can edit the title and content and then update it by clicking the Update Post button. You can delete a post by clicking on the Delete Post button. You may also add a comment to a post by typing the comment in the Add a Comment box and clicking on the Add Comment button to save it. The comments are listed below the post. You can update or delete a comment by clicking on the comment. You will then be taken to an comment edit page where you can edit the comment and then save the update by clicking on the Update Comment button. You can also delete a comment by clicking on the Delete Comment button. You are logged off after one minute of inactivity.
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![Screen Shot of Mark's Tech Blog](./ScreenShot.png)
 
 ## Credits
 

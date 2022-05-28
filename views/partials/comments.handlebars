@@ -1,6 +1,6 @@
 <div class='comments'>
   {{#if this}}
-    <p>Click on Comment below to Update or Delete</p>
+    <p class='mt-4'>Click on Comment below to Update or Delete</p>
   {{/if}}
   {{#each this}}
     <section class='comment'>
@@ -11,7 +11,7 @@
         {{format_date created_at}}
       </div>
       <div class='text'>
-        <a href='/comment/{{id}}'>{{comment_text}}</a>
+        <strong><a href='/comment/{{id}}'>{{comment_text}}</a></strong>
       </div>
     </section>
   {{/each}}
