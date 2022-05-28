@@ -1,31 +1,41 @@
-<h3>Current User Login</h3>
-<form class='login-form'>
-  <div>
-    <label for='username-login'>Username:</label>
-    <input type='text' id='username-login' />
+<div class='container'>
+  <div class='row'>
+    <div class='col-1 col-md-3 col-xl-4'>
+    </div>
+    <div class='col-10 col-md-6 col-xl-4'>
+      <h3 class='center-heading'>Current User Login</h3>
+      <form class='login-form'>
+        <div>
+          <label for='username-login'>Username:</label>
+          <input type='text' id='username-login' />
+        </div>
+        <div>
+          <label class='pr-1' for='password-login'>Password: </label>
+          <input type='password' id='password-login' />
+        </div>
+        <div>
+          <button class='login-btn' type='submit'>Login</button>
+        </div>
+      </form>
+      <h3 class='center-heading'>Create a New Account</h3>
+      <form class='signup-form'>
+        <div>
+          <label for='username-signup'>Username:</label>
+          <input type='text' id='username-signup' />
+        </div>
+        <div>
+          <label class='pr-1' for='password-signup'>Password: </label>
+          <input type='password' id='password-signup' />
+          <span> (minimum 8 characters)</span>
+        </div>
+        <div>
+          <button class='signup-btn' type='submit'>Signup</button>
+        </div>
+      </form>
+      <div class='col-1 col-md-3 col-xl-4'>
+      </div>
+    </div>
   </div>
-  <div>
-    <label for='password-login'>Password:</label>
-    <input type='password' id='password-login' />
-  </div>
-  <div>
-    <button type='submit'>Login</button>
-  </div>
-</form>
-<h3>Create a New Account</h3>
-<form class='signup-form'>
-  <div>
-    <label for='username-signup'>Username:</label>
-    <input type='text' id='username-signup' />
-  </div>
-  <div>
-    <label for='password-signup'>Password:</label>
-    <input type='password' id='password-signup' />
-    <span> (minimum 8 characters)</span>
-  </div>
-  <div>
-    <button type='submit'>Signup</button>
-  </div>
-</form>
+</div>
 
 <script src='/javascript/login.js'></script>

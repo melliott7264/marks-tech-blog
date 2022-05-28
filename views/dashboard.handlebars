@@ -1,16 +1,25 @@
-<section>
-  <h2><a href='/new'>Create New Post</a></h2>
-</section>
+<div class="container">
+  <div class="row">
+    <div class="col-1 col-md-2 col-xl-3"></div>
+     <div class="col-10 col-md-8 col-xl-6">
+       {{#if posts.length}}
+        <section>
+            <h2 class="center-heading">Your Posts</h2>
+        <ol>  
+          {{#each posts as |post|}}
+            <li>
+              {{>post-info post}}
+            </li>
+          {{/each}}
+        </ol>
+        </section>
+      {{/if}}
+     </div>
+      <div class="col-1 col-md-2 col-xl-3"></div>
+  </div>
+</div>
 
-{{#if posts.length}}
+
 <section>
-    <h2>Your Posts</h2>
-<ol>  
-  {{#each posts as |post|}}
-    <li>
-      {{>post-info post}}
-    </li>
-  {{/each}}
-</ol>
+  <h2 class="center-heading"><a href='/new'>Create New Post</a></h2>
 </section>
-{{/if}}

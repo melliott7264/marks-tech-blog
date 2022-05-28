@@ -1,45 +1,56 @@
-<article class='post'>
-  {{#if loggedIn}}
-  <h3>Your Post</h3>
-  <form class="update-post-form">
-   <div class='title'>
-     <h3>
-       <input type='text' id='update-post-title' value='{{post.title}}' />
-    </h3>
+<div class='container'>
+  <div class='row'>
+    <div class='col-1 col-md-2 col-xl-3'></div>
+     <div class='col-10 col-md-8 col-xl-6'>
+        <article class='post'>
+          {{#if loggedIn}}
+          <h3 class='center-heading'>Your Post</h3>
+          <form class='update-post-form'>
+          <div class='title'>
+            <h3>
+              <input type='text' id='update-post-title' value='{{post.title}}' />
+            </h3>
+          </div>
+          <div class='content'>
+              <input type='text' id='update-post-content' value='{{post.content}}' />
+          </div class='text-center'>
+          <button class='save-post-btn' type='submit'>Update Post</button> 
+          <button type="button" class="delete-post-btn">Delete Post</button>
+          </form>
+          {{else}}
+          <div class='title'>
+            <h3>{{post.title}}</h3>
+          </div>
+          <div class='content'>
+            <p>{{post.content}}</p>
+          </div>
+          {{/if}}
+          <div class='meta'>
+            by
+            {{post.user.username}}
+            on
+            {{format_date post.created_at}}
+          </div>
+        </article>
+        <section>
+          {{#if loggedIn}}
+            <h3 class='center-heading'>Add a Comment</h3>
+              <form class='comment-form'>
+                <div>
+                  <textarea class='comment-text-area' name='comment-body'></textarea>
+                </div>
+                <div>
+                  <button class='add-comment-btn' type='submit'>Add Comment</button>
+                </div>
+              </form>
+            {{/if}}
+            {{>comments post.comments}}
+        </section>
+     </div>
+     <div class='col-1 col-md-2 col-xl-3'></div>
   </div>
-   <div class='content'>
-      <input type='text' id='update-post-content' value='{{post.content}}' />
-  </div>
-  <button type='submit'>Save Post</button> 
-  <button type="button" class="delete-post-btn">Delete Post</button>
-  </form>
-  {{else}}
-   <div class='title'>
-    <h3>{{post.title}}</h3>
-  </div>
-   <div class='content'>
-    <p>{{post.content}}</p>
-  </div>
-  {{/if}}
-  <div class='meta'>
-    by
-    {{post.user.username}}
-    on
-    {{format_date post.created_at}}
-  </div>
-</article>
-{{#if loggedIn}}
-<h3>Add a Comment</h3>
-  <form class='comment-form'>
-    <div>
-      <textarea name='comment-body'></textarea>
-    </div>
-    <div>
-      <button type='submit'>Add Comment</button>
-    </div>
-  </form>
-{{/if}}
-{{>comments post.comments}}
+</div>
+
 {{#if loggedIn}}
   <script src='/javascript/comment.js'></script>
   <script src='/javascript/update-post.js'></script>
