@@ -21,11 +21,11 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sess = {
   secret: process.env.SESSION_SECRET,
-  // secret: 'Mark had a fluffy white doggie',
+
+  // set session timeout to 5 minutes
   cookie: {
-    expires: 60 * 1000,
+    expires: 5 * 60 * 1000,
   },
-  // set session timeout to 10 minutes
   resave: true,
   rolling: true,
   saveUninitialized: false,
