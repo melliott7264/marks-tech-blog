@@ -13,11 +13,11 @@ Mark's Tech Blog is a WordPress style tech block written from scratch using Node
 
 ## Installation
 
-This project will be running on Heroku. So, no real installation will be required. You just have to execute the URL: . All the application source code can be found at https://github.com/melliott7264/marks-tech-blog. If you want to run the application locally, you will have to install the following npm packages in the folder holding the clone of the above repository: mysql2(npm i --save mysql2), sequelize(npm i sequelize), express(npm i express), express-handlebars(npm i express-handlebars), express-session(npm i express-session), connect-session-sequelize(npm i connect-session-sequelize), dotenv(npm i dotenv --save), and bcrypt(npm i bcrypt ). A MySQL database will have to be available and you will need root access to create the database. It is suggested that you grant privileges to another user with access only to that one database. Then, store that username and password in the .env file in the root of the application folder.
+This project will be running on Heroku. So, no real installation will be required. You just have to execute the URL: https://warm-chamber-02188.herokuapp.com/. All the application source code can be found at https://github.com/melliott7264/marks-tech-blog. If you want to run the application locally, you will have to install the following npm packages in the folder holding the clone of the above repository: mysql2(npm i --save mysql2), sequelize(npm i sequelize), express(npm i express), express-handlebars(npm i express-handlebars), express-session(npm i express-session), connect-session-sequelize(npm i connect-session-sequelize), dotenv(npm i dotenv --save), and bcrypt(npm i bcrypt ). A MySQL database will have to be available and you will need root access to create the database. It is suggested that you grant privileges to another user with access only to that one database. Then, store that username and password in the .env file in the root of the application folder.
 
 ## Usage
 
-This application will be run from Heroku at the following URL: .
+This application will be run from Heroku at the following URL: https://warm-chamber-02188.herokuapp.com/.
 
 Provide instructions and examples for use. Include screenshots as needed.
 
