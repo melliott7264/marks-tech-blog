@@ -1,3 +1,5 @@
+// Handles signup form input
+
 async function signupFormHandler(event) {
   event.preventDefault();
 
@@ -26,9 +28,12 @@ async function signupFormHandler(event) {
   }
 }
 
+// Waits for submit(click/enter) on signup form
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+// Handles login form input
 
 async function loginFormHandler(event) {
   event.preventDefault();
@@ -53,6 +58,7 @@ async function loginFormHandler(event) {
   }
 }
 
+// Waits for submit(click/enter) on login form
 document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);

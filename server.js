@@ -26,9 +26,13 @@ const sess = {
   cookie: {
     expires: 5 * 60 * 1000,
   },
+  // resaves the cookie on update
   resave: true,
+  // resets the expiration on update
   rolling: true,
+  // will not save cookie unless modified in some way
   saveUninitialized: false,
+  // store cookie in Sequelize/SQL as well as on browser
   store: new SequelizeStore({
     db: sequelize,
   }),

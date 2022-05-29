@@ -1,3 +1,5 @@
+// Handles save/update and delete functions on comment update/delete form/page
+
 async function commentUpdateFormHandler(event) {
   event.preventDefault();
 

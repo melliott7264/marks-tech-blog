@@ -1,8 +1,10 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
+// withAuth makes sure that someone is logged it to access the dashboard - not necessarily the owner of the post
 const withAuth = require('../utils/auth');
 const { Post, User, Comment } = require('../models');
 
+// This route is used just for the dashboard page - Could have put this in home-routes as '/dashboard'
 router.get('/', withAuth, (req, res) => {
   Post.findAll({
     where: {

@@ -1,3 +1,5 @@
+// Handles input from comment form
+
 async function commentFormHandler(event) {
   event.preventDefault();
 

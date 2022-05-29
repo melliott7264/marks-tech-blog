@@ -3,6 +3,8 @@ const sequelize = require('../config/connection');
 const withAuth = require('../utils/auth');
 const { Post, User, Comment } = require('../models');
 
+// These routes are for the root '/'
+
 // This gets all the posts and loads the homepage
 router.get('/', (req, res) => {
   Post.findAll({
@@ -36,6 +38,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// This route handles the login and redirects to the root/homepage
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');

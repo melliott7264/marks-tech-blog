@@ -1,3 +1,5 @@
+// Handles post from create post form/page
+
 async function postFormHandler(event) {
   event.preventDefault();
 

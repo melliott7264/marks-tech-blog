@@ -1,3 +1,5 @@
+// Handles updates/delete on single post page when user logged in
+
 async function postUpdateFormHandler(event) {
   event.preventDefault();
 

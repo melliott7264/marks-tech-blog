@@ -22,6 +22,7 @@ Comment.belongsTo(User, {
 
 // Many to one
 Comment.belongsTo(Post, {
+  // Had to remove the foreign key to get the Post deletes to work
   // foreignKey: 'post_id',
 });
 
