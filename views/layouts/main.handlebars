@@ -1,3 +1,4 @@
+{{! This is the main HTML template - everything plugs in here }}
 <html lang='en'>
 
   <head>
@@ -20,6 +21,7 @@
               <a href='/'>Mark's Tech Blog</a>
             </h1>
             <div class='container'>
+              {{! Nav for all the pages }}
               <nav class='row'>
                 <div class='col text-center'>
                   <h2>
@@ -27,10 +29,12 @@
                   </h2>
                 </div>
                 <div class='col text-center'>
+                  {{! dashboard-route(s) with withAuth helper prevents the dashboard from loading if not logged in }}
                   <h2>
                     <a href='/dashboard'>Dashboard</a>
                   </h2>
                 </div>
+                {{! Only display Logout button if logged in }}
                 {{#if loggedIn}}
                   <div class='col text-center'>
                     <h2>
@@ -38,6 +42,7 @@
                     </h2>
                   </div>
                 {{else}}
+                  {{! Display Login if not logged in }}
                   <div class='col text-center'>
                     <h2>
                       <a href='/login'>Login</a>
@@ -53,6 +58,7 @@
       <main>
         {{{body}}}
       </main>
+      {{! Commented out the footer because of styling/CSS issues that I did not have time to resolve }}
       {{! <footer class='bg-info text-white text-center'>
         &copy;2022 Mark Elliott All Rights Reserved
       </footer> }}

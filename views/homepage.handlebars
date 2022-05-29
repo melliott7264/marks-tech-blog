@@ -1,8 +1,10 @@
+{{!-- Template that serves up the homepage with posts listing --}}
 <div class='container'>
   <div class='row'>
     <div class='col-1 col-md-2 col-xl-3'></div>
      <div class='col-10 col-md-8 col-xl-6'>
       <ul class='post-list container'>
+        {{!-- List ALL the posts --}}
         {{#each posts as |post|}}
         <div class='row'>
           <li class='col'>
