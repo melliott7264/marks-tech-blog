@@ -50,7 +50,7 @@ router.get('/post/:id', (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes: ['id', 'title', 'content', 'created_at'],
+    attributes: ['id', 'title', 'content', 'user_id', 'created_at'],
     include: [
       {
         model: Comment,
@@ -75,10 +75,18 @@ router.get('/post/:id', (req, res) => {
       // serialize the data
       const post = dbPostData.get({ plain: true });
 
+      //check if logged-in user owns post
+      console.log(req.session.user_id, dbPostData.user_id);
+      if (req.session.user_id === dbPostData.user_id) {
+        var userAuth = true;
+      }
+      console.log(userAuth);
+
       // pass data to the template
       res.render('single-post', {
         post,
         loggedIn: req.session.loggedIn,
+        userAuth,
       });
     })
     .catch((err) => {
