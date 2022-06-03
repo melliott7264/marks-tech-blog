@@ -87,7 +87,36 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
+/* Proposed code to authenticate user
+router.put('/', withAuth, async (req,res)=>{
+  try {
+    if(req.session.loggedIn) {
+      const postData = await Post.update(
+        {
+        where: {
+          // user id from session
+          user_id: req.session.user_id
+        },
+        {
+           title: req.body.title,
+           content: req.body.content,
+          // user id from session
+          user_id: req.session.user_id,
+        }
+      },
+      )
+      res.json(postData);
+    }
+  }
+  catch(err) {
+    console.log(err);
+    res.status(500).json(err);
+  };
+});
+*/
+
 // update a post title
+// need to authenticate to a specific user_id
 router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {
@@ -114,6 +143,7 @@ router.put('/:id', withAuth, (req, res) => {
 });
 
 // delete a post
+// need to authenticate to a specific user_id
 router.delete('/:id', withAuth, (req, res) => {
   Post.destroy({
     where: {
