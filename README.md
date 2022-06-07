@@ -25,6 +25,8 @@ This application will be run from Heroku at the following URL: https://warm-cham
 
 Mark Elliott https://github.com/melliott7264
 
+Background photo by 2H Media on Unsplash.
+
 ## License
 
 Copyright (c) 2022 Mark Elliott
